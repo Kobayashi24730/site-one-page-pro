@@ -12,7 +12,7 @@ const links = [
   { label: "Contato", href: "#contato" },
 ];
 
-export default function Navbar() {
+export function Navbar() {
   const [open, setOpen] = useState(false);
 
   return (

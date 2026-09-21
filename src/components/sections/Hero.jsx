@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import heroImg from "@/assets/hero-politician.jpg";
 
-export default function Hero() {
+export function Hero() {
   return (
     <section id="inicio" className="relative min-h-screen flex items-center pt-16 overflow-hidden bg-background">
       <div className="container mx-auto px-6 grid lg:grid-cols-2 gap-12 items-center py-16 lg:py-0">

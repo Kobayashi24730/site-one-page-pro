@@ -15,7 +15,7 @@ const timeline = [
   { year: "2024", event: "Candidato a prefeito — por uma cidade melhor" },
 ];
 
-export default function About() {
+export function About() {
   return (
     <section id="sobre" className="py-24 bg-card">
       <div className="container mx-auto px-6">

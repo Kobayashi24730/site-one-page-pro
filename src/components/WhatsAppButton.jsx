@@ -1,4 +1,4 @@
-export default function WhatsAppButton() {
+export function WhatsAppButton() {
   return (
     <a
       href="https://wa.me/5500000000000"

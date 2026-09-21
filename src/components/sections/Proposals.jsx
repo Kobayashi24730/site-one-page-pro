@@ -8,7 +8,7 @@ const proposals = [
   { title: "Infraestrutura", desc: "Pavimentação sustentável, mobilidade urbana e saneamento básico para todos os bairros.", icon: Building2 },
 ];
 
-export default function Proposals() {
+export function Proposals() {
   return (
     <section id="propostas" className="py-24 bg-background">
       <div className="container mx-auto px-6">

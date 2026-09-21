@@ -11,7 +11,7 @@ const images = [
   { src: g4, alt: "Visita a obra de infraestrutura" },
 ];
 
-export default function Gallery() {
+export function Gallery() {
   return (
     <section id="galeria" className="py-24 bg-background">
       <div className="container mx-auto px-6">

@@ -9,18 +9,19 @@ const schema = z.object({
   message: z.string().trim().min(1, "Mensagem obrigatória").max(1000),
 });
 
-export default function Contact() {
+export function Contact() {
   const [form, setForm] = useState({ name: "", email: "", message: "" });
-  const [errors, setErrors] = useState<Record<string, string>>({});
+  const [errors, setErrors] = useState({});
   const [sent, setSent] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  /** @param {React.FormEvent<HTMLFormElement} e */
+  const handleSubmit = (e) => {
     e.preventDefault();
     const result = schema.safeParse(form);
     if (!result.success) {
-      const fieldErrors: Record<string, string> = {};
+      const fieldErrors = {};
       result.error.errors.forEach((err) => {
-        if (err.path[0]) fieldErrors[err.path[0] as string] = err.message;
+        if (err.path[0]) fieldErrors[err.path[0]] = err.message;
       });
       setErrors(fieldErrors);
       return;

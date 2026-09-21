@@ -21,7 +21,7 @@ const projects = [
   },
 ];
 
-export default function Projects() {
+export function Projects() {
   return (
     <section id="realizacoes" className="py-24 bg-card">
       <div className="container mx-auto px-6">
