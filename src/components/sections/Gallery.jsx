@@ -21,8 +21,8 @@ export function Gallery() {
         </AnimatedSection>
 
         <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
-          {images.map((img, i) => (
-            <AnimatedSection key={i} delay={i * 0.08}>
+          {images.map((img, index) => (
+            <AnimatedSection key={index} delay={i * 0.08}>
               <div className="group aspect-square rounded-2xl overflow-hidden shadow-soft">
                 <img
                   src={img.src}

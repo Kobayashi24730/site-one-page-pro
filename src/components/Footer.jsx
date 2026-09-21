@@ -4,7 +4,7 @@ export function Footer() {
       <div className="container mx-auto px-6">
         <div className="grid sm:grid-cols-3 gap-8 mb-10">
           <div>
-            <h4 className="font-serif text-xl text-primary-foreground mb-3">Carlos Eduardo Silva</h4>
+            <h4 className="font-serif text-xl text-primary-foreground mb-3">Guilherme Silva</h4>
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
               Trabalhando por um futuro melhor para nossa cidade.
             </p>
@@ -24,7 +24,7 @@ export function Footer() {
           <div>
             <h5 className="font-bold text-primary-foreground text-sm mb-3 uppercase tracking-wider">Legal</h5>
             <p className="text-primary-foreground/60 text-sm leading-relaxed">
-              Este site é mantido pela campanha de Carlos Eduardo Silva, conforme legislação eleitoral vigente.
+              Este site é mantido pela campanha de Guilherme Silva, conforme legislação eleitoral vigente.
             </p>
           </div>
         </div>

@@ -8,11 +8,11 @@ const values = [
 ];
 
 const timeline = [
-  { year: "2008", event: "Formado em Direito pela Universidade Federal" },
-  { year: "2012", event: "Eleito vereador com mais de 15 mil votos" },
-  { year: "2016", event: "Reeleito com votação recorde no município" },
-  { year: "2020", event: "Eleito deputado estadual — líder de bancada" },
-  { year: "2024", event: "Candidato a prefeito — por uma cidade melhor" },
+  { ano: "2008", event: "Formado em Direito pela Universidade Federal" },
+  { ano: "2012", event: "Eleito vereador com mais de 15 mil votos" },
+  { ano: "2016", event: "Reeleito com votação recorde no município" },
+  { ano: "2020", event: "Eleito deputado estadual — líder de bancada" },
+  { ano: "2024", event: "Candidato a prefeito — por uma cidade melhor" },
 ];
 
 export function About() {
@@ -28,7 +28,6 @@ export function About() {
           </p>
         </AnimatedSection>
 
-        {/* Values */}
         <div className="grid md:grid-cols-3 gap-8 mb-20">
           {values.map((v, i) => (
             <AnimatedSection key={v.title} delay={i * 0.1} className="p-8 rounded-2xl bg-background shadow-soft text-center">
@@ -41,19 +40,18 @@ export function About() {
           ))}
         </div>
 
-        {/* Timeline */}
         <AnimatedSection>
           <h3 className="text-2xl font-serif text-primary text-center mb-12">Trajetória</h3>
           <div className="max-w-2xl mx-auto relative">
             <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-border md:-translate-x-px" />
             {timeline.map((t, i) => (
-              <AnimatedSection key={t.year} delay={i * 0.08} className="relative flex items-start gap-6 mb-8 md:even:flex-row-reverse md:even:text-right">
+              <AnimatedSection key={t.ano} delay={i * 0.08} className="relative flex items-start gap-6 mb-8 md:even:flex-row-reverse md:even:text-right">
                 <div className="hidden md:block flex-1" />
                 <div className="relative z-10 w-8 h-8 rounded-full bg-accent flex items-center justify-center shrink-0">
                   <div className="w-3 h-3 rounded-full bg-accent-foreground" />
                 </div>
                 <div className="flex-1 pb-2">
-                  <span className="text-sm font-bold text-accent">{t.year}</span>
+                  <span className="text-sm font-bold text-accent">{t.ano}</span>
                   <p className="text-primary font-medium mt-1">{t.event}</p>
                 </div>
               </AnimatedSection>

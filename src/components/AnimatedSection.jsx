@@ -1,5 +1,9 @@
 import { motion } from "framer-motion";
 
+
+//? Animação de entrada de elementos(Aquela que aparece da esquerda para a direita).
+//? Pode ser usado em qualquer componente ou seja import ele no componente que deseja animar e coloque o conteudo entres as chaves.
+//? Espero que tenha entendido.
 export default function AnimatedSection({ children, className = "", delay = 0 }) {
   return (
     <motion.div

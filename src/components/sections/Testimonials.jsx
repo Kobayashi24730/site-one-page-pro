@@ -21,9 +21,10 @@ const testimonials = [
 ];
 
 export function Testimonials() {
+  //? Logica para mudar o texto e percorer a array testimonials
   const [idx, setIdx] = useState(0);
-  const prev = () => setIdx((i) => (i === 0 ? testimonials.length - 1 : i - 1));
-  const next = () => setIdx((i) => (i === testimonials.length - 1 ? 0 : i + 1));
+  const prev = () => setIdx((i) => (i === 0 ? testimonials.length - 1 : i - 1)); //? Anteriror
+  const next = () => setIdx((i) => (i === testimonials.length - 1 ? 0 : i + 1)); //? Proximo
   const t = testimonials[idx];
 
   return (

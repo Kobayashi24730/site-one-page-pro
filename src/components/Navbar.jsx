@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
-const links = [
+const opcoes = [
   { label: "Início", href: "#inicio" },
   { label: "Sobre", href: "#sobre" },
   { label: "Propostas", href: "#propostas" },
@@ -19,18 +19,18 @@ export function Navbar() {
     <nav className="fixed top-0 left-0 right-0 z-50 bg-card/80 backdrop-blur-lg border-b border-border">
       <div className="container mx-auto flex items-center justify-between h-16 px-6">
         <a href="#inicio" className="font-serif text-xl text-primary tracking-tight">
-          Carlos Eduardo
+          Guilherme Silva
         </a>
 
         {/* Desktop */}
         <ul className="hidden md:flex items-center gap-8">
-          {links.map((l) => (
-            <li key={l.href}>
+          {opcoes.map((i) => (
+            <li key={i.href}>
               <a
-                href={l.href}
+                href={i.href}
                 className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
               >
-                {l.label}
+                {i.label}
               </a>
             </li>
           ))}
@@ -63,14 +63,14 @@ export function Navbar() {
             className="md:hidden bg-card border-b border-border overflow-hidden"
           >
             <ul className="flex flex-col py-4 px-6 gap-1">
-              {links.map((l) => (
-                <li key={l.href}>
+              {opcoes.map((i) => (
+                <li key={i.href}>
                   <a
-                    href={l.href}
+                    href={i.href}
                     onClick={() => setOpen(false)}
                     className="block py-3 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
                   >
-                    {l.label}
+                    {i.label}
                   </a>
                 </li>
               ))}

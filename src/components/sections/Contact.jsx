@@ -3,6 +3,7 @@ import { Send, Instagram, Facebook, Youtube } from "lucide-react";
 import AnimatedSection from "@/components/AnimatedSection";
 import { z } from "zod";
 
+//? Ultiliza o zod para validar os dados
 const schema = z.object({
   name: z.string().trim().min(1, "Nome obrigatório").max(100),
   email: z.string().trim().email("E-mail inválido").max(255),

@@ -127,7 +127,7 @@ function toast({ ...props }) {
 }
 
 function useToast() {
-  // ✅ Removido o generics <State> do React.useState
+  //? Removido o generics <State> do React
   const [state, setState] = React.useState(memoryState);
 
   React.useEffect(() => {
