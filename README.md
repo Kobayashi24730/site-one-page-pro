@@ -1,122 +1,112 @@
-# 🌐 Site One Page Pro - Projeto de Estudo
+# Site One Page Pro
 
-Este projeto é um **site one-page** desenvolvido com **React + TypeScript + Vite**, utilizando **Tailwind CSS** e componentes baseados em **shadcn/ui** (Radix UI).
+Um template de **landing page / site de página única** construído com React, TypeScript e shadcn/ui, focado em performance, acessibilidade e facilidade de customização.
 
----
+## ✨ Stack
 
-## 🧠 Sobre o Projeto
+- **[Vite](https://vitejs.dev/)** — build tool e dev server
+- **[React 18](https://react.dev/)** + **TypeScript**
+- **[shadcn/ui](https://ui.shadcn.com/)** + **Radix UI** — componentes acessíveis
+- **[Tailwind CSS](https://tailwindcss.com/)** — estilização utilitária
+- **[React Router](https://reactrouter.com/)** — roteamento
+- **[React Hook Form](https://react-hook-form.com/)** + **[Zod](https://zod.dev/)** — formulários e validação
+- **[TanStack Query](https://tanstack.com/query)** — gerenciamento de estado assíncrono
+- **[Vitest](https://vitest.dev/)** + **[Testing Library](https://testing-library.com/)** — testes unitários
+- **[Playwright](https://playwright.dev/)** — testes end-to-end
 
-Este projeto foi desenvolvido com **fins educacionais**, visando:
+## 🚀 Começando
 
-- Praticar a construção de uma landing page moderna e responsiva
-- Explorar a biblioteca de componentes shadcn/ui (Radix UI)
-- Estilização utilitária com Tailwind CSS
-- Formulários e validação com React Hook Form + Zod
-- Escrever testes com Vitest e Playwright
+### Pré-requisitos
 
----
+- [Node.js](https://nodejs.org/) 18+ (recomendado usar [nvm](https://github.com/nvm-sh/nvm))
+- npm (ou pnpm/yarn, ajustando os comandos abaixo)
 
-## ⚙️ Tecnologias Utilizadas
-
-- **React** + **TypeScript**
-- **Vite** — build tool
-- **Tailwind CSS** — estilização
-- **shadcn/ui** (componentes Radix UI: dialog, dropdown, tabs, tooltip, etc.)
-- **React Router DOM** — roteamento
-- **React Hook Form** + **Zod** — formulários e validação
-- **TanStack Query** — gerenciamento de dados assíncronos
-- **Framer Motion** — animações
-- **Recharts** — gráficos
-- **Vitest** + **Testing Library** — testes unitários
-- **Playwright** — testes end-to-end
-
----
-
-## 📂 Estrutura do Projeto
-
-```
-site-one-page-pro/
-├── public/                 # Arquivos estáticos
-├── src/                    # Código-fonte da aplicação
-├── index.html
-├── vite.config.ts
-├── vitest.config.ts
-├── playwright.config.ts
-├── tailwind.config.ts
-└── components.json         # Configuração do shadcn/ui
-```
-
----
-
-## ▶️ Como Executar
-
-### 1. Instalar dependências
+### Instalação
 
 ```bash
+# Clone o repositório
+git clone https://github.com/Kobayashi24730/site-one-page-pro.git
+cd site-one-page-pro
+
+# Instale as dependências
 npm install
 ```
 
-### 2. Rodar em modo desenvolvimento
+### Ambiente de desenvolvimento
 
 ```bash
 npm run dev
 ```
 
-### 3. Gerar build de produção
+O site ficará disponível em `http://localhost:5173` (porta padrão do Vite).
 
-```bash
-npm run build
-```
+## 📦 Scripts disponíveis
 
-### 4. Visualizar o build
-
-```bash
-npm run preview
-```
-
----
+| Comando | Descrição |
+|---|---|
+| `npm run dev` | Inicia o servidor de desenvolvimento |
+| `npm run build` | Gera o build de produção em `dist/` |
+| `npm run build:dev` | Gera o build em modo desenvolvimento |
+| `npm run preview` | Serve o build de produção localmente |
+| `npm run lint` | Executa o ESLint |
+| `npm run test` | Executa os testes unitários (Vitest) |
+| `npm run test:watch` | Executa os testes em modo watch |
 
 ## 🧪 Testes
 
-### Testes unitários (Vitest)
+Testes unitários com Vitest:
 
 ```bash
-npm run test          # roda os testes uma vez
-npm run test:watch    # roda em modo watch
+npm run test
 ```
 
-### Testes end-to-end (Playwright)
+Testes end-to-end com Playwright (configurados em `playwright.config.ts`):
 
 ```bash
 npx playwright test
 ```
 
-### Lint
+## 📁 Estrutura do projeto
 
-```bash
-npm run lint
+```
+site-one-page-pro/
+├── public/              # Arquivos estáticos
+├── src/
+│   ├── components/      # Componentes React (incluindo UI do shadcn)
+│   ├── pages/           # Páginas/seções do site
+│   ├── hooks/           # Custom hooks
+│   ├── lib/             # Funções utilitárias
+│   └── ...
+├── index.html
+├── tailwind.config.ts
+├── vite.config.ts
+└── playwright.config.ts
 ```
 
----
+> Ajuste esta seção conforme a estrutura real do seu `src/`.
 
-## ⚠️ Observações
+## 🎨 Customização
 
-- Este projeto ainda está em desenvolvimento.
-- Algumas funcionalidades podem ser melhoradas ou refatoradas.
-- O foco principal é aprendizado e evolução contínua.
+- **Cores e tema**: edite `tailwind.config.ts`
+- **Componentes shadcn/ui**: configuração em `components.json`
+- **Conteúdo do site**: edite os componentes dentro de `src/pages` ou `src/components`
 
----
+## 🏗️ Build para produção
+
+```bash
+npm run build
+```
+
+Os arquivos otimizados serão gerados na pasta `dist/`, prontos para deploy em serviços como Vercel, Netlify, Cloudflare Pages ou GitHub Pages.
+
+## 🤝 Contribuindo
+
+1. Faça um fork do projeto
+2. Crie uma branch para sua feature (`git checkout -b feature/minha-feature`)
+3. Faça commit das suas alterações (`git commit -m 'feat: minha feature'`)
+4. Faça push para a branch (`git push origin feature/minha-feature`)
+5. Abra um Pull Request
 
 ## 📄 Licença
 
-Este projeto é distribuído sob a licença **MIT** — veja o arquivo [LICENSE](./LICENSE) para mais detalhes.
-
-Em resumo: **qualquer pessoa pode usar, copiar, modificar e distribuir este projeto**, inclusive para fins comerciais, **desde que mantenha o aviso de direitos autorais e a licença original** em cópias ou partes substanciais do software.
-
----
-
-## 👨‍💻 Autor
-
-Desenvolvido por **Guilherme Silva**
-Desenvolvedor Full Stack
-
+Defina aqui a licença do projeto (ex.: MIT). Se ainda não houver uma, considere adicionar um arquivo `LICENSE`.
